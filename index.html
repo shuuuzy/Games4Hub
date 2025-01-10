@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name='admaven-placement' content=BqdkHpdwH>
+  
+	<script data-cfasync="false" src="//dcbbwymp1bhlf.cloudfront.net/?wbbcd=1139034"></script>
+	
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Download Platform</title>
+  <style>
+    /* تصميم الصفحة */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1f1f2e;
+      color: #fff;
+    }
+
+    .header {
+      background-color: #2a2a3c;
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 20px;
+    }
+
+    .section h2 {
+      color: #4a90e2;
+      margin-bottom: 15px;
+    }
+
+    /* تصميم التطبيقات المميزة */
+    .featured-apps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+    }
+
+    .featured-app {
+      background-color: #333;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .featured-app img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
+
+    .featured-app h3 {
+      margin: 10px 0 5px;
+      font-size: 16px;
+      color: #fff;
+    }
+
+    .featured-app p {
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    /* تصميم جميع التطبيقات */
+    .app {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      background: #333;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      margin-bottom: 15px;
+      cursor: pointer;
+    }
+
+    .app img {
+      width: 100px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .app-details {
+      flex: 1;
+    }
+
+    .app-details h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    .app-details p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    /* النوافذ المنبثقة */
+    .popup, .popup-download {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-content {
+      background-color: #2a2a3c;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .popup-content img {
+      width: 120px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+    }
+
+    .popup-content p {
+      margin: 10px 0;
+      font-size: 16px;
+      color: #fff;
+    }
+
+    .close {
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      cursor: pointer;
+    }
+
+    .download-button {
+      display: inline-block;
+      background-color: #4a90e2;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .download-button:hover {
+      background-color: #3a7ac5;
+    }
+    
+   
+    
+  </style>
+</head>
+
+<body>
+  <!-- رأس الصفحة -->
+  <div class="header">Games Hub</div>
+
+  <!-- التطبيقات المميزة -->
+  <div class="section featured-apps">
+    <h2>Featured Apps</h2>
+    <div class="featured-apps-grid">
+      <div class="featured-app" onclick="showDetails('Fnf india cross apk', '4.5', 'https://i.ibb.co/X4h4sMW/b5092c38e8ae18aa70d0e0419f2c12f60d95e949d2cc53f7061f0dbe01ad7844-200.jpg')">
+        <img src="https://i.ibb.co/X4h4sMW/b5092c38e8ae18aa70d0e0419f2c12f60d95e949d2cc53f7061f0dbe01ad7844-200.jpg" alt="App">
+        <h3>Fnf india cross apk</h3>
+        <p>★ 4.5</p>
+      </div>
+      <div class="featured-app" onclick="showDetails('Featured App 2', '4.3', 'https://i.ibb.co/M7nb9v6/artworks-Xf0-Gac-EUV4-Aqq1-Sn-Cw-XLLg-t500x500.jpg')">
+        <img src="https://i.ibb.co/M7nb9v6/artworks-Xf0-Gac-EUV4-Aqq1-Sn-Cw-XLLg-t500x500.jpg" alt="App">
+        <h3>Baldi's Basics Plus</h3>
+        <p>★ 4.3</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- جميع التطبيقات -->
+  <div class="section all-apps">
+  <h2>All Apps</h2>
+  <div class="app" onclick="showDetails('Ninja (MOD, Unlimited Money)', '4.7', 'https://i.ibb.co/XWn7qvR/1687529993-clumsy-ninja.png')">
+    <img src="https://i.ibb.co/XWn7qvR/1687529993-clumsy-ninja.png" alt="App">
+    <div class="app-details">
+      <h3>Ninja (MOD, Unlimited Money)</h3>
+      <p>An epic adventure game to explore the unknown.</p>
+      <p>★ 4.7</p>
+    </div>
+  </div>
+  <div class="app" onclick="showDetails('Racing Fever: Moto (MOD, Unlimited Money)', '4.5', 'https://i.ibb.co/kD8kZm3/1687257390-racing-fever-moto.png')">
+    <img src="https://i.ibb.co/kD8kZm3/1687257390-racing-fever-moto.png" alt="App">
+    <div class="app-details">
+      <h3>Racing Fever: Moto (MOD, Unlimited Money)</h3>
+      <p>A fast-paced racing game with stunning graphics.</p>
+      <p>★ 4.5</p>
+    </div>
+  </div>
+  <div class="app" onclick="showDetails('Ultra FUCK Aim 8 ball', '4.8', 'https://i.ibb.co/y4wymmk/Picsart-24-12-18-22-17-05-760.jpg')">
+    <img src="https://i.ibb.co/y4wymmk/Picsart-24-12-18-22-17-05-760.jpg" alt="App">
+    <div class="app-details">
+      <h3>Ultra FUCK Aim 8 ball</h3>
+      <p>Challenge your brain with exciting puzzles.</p>
+      <p>★ 4.8</p>
+    </div>
+  </div>
+  <div class="app" onclick="showDetails('The Escapists: Prison Escape MOD (Unlimited Money)', '4.6', 'https://i.ibb.co/f0ynKdM/ico-the-escapists-1621470843-100.webp')">
+    <img src="https://i.ibb.co/f0ynKdM/ico-the-escapists-1621470843-100.webp" alt="App">
+    <div class="app-details">
+      <h3>The Escapists: Prison Escape MOD (Unlimited Money)</h3>
+      <p>Embark on a thrilling shooting mission.</p>
+      <p>★ 4.6</p>
+    </div>
+  </div>
+  <div class="app" onclick="showDetails('Bus Simulator: EVO (MOD, Unlimited Money)', '4.9', 'https://i.ibb.co/hBS4fNW/1670064900-bus-simulator-2023.png')">
+    <img src="https://i.ibb.co/hBS4fNW/1670064900-bus-simulator-2023.png0" alt="App">
+    <div class="app-details">
+      <h3>Bus Simulator: EVO (MOD, Unlimited Money) </h3>
+      <p>Defend your kingdom in this strategy game.</p>
+      <p>★ 4.9</p>
+    </div>
+  </div>
+  <div class="app" onclick="showDetails('RFS MOD APK [Full Unlocked, Premium]', '4.4', 'https://i.ibb.co/yh82JRc/RFS-MOD-APK-1-6.webp')">
+    <img src="https://i.ibb.co/yh82JRc/RFS-MOD-APK-1-6.webp" alt="App">
+    <div class="app-details">
+      <h3>RFS MOD APK [Full Unlocked, Premium]</h3>
+      <p>Explore vast open worlds in this RPG game.</p>
+      <p>★ 4.4</p>
+    </div>
+  </div>
+<div class="app" onclick="showDetails('DEAD TRIGGER (MOD, Unlimited Money)', '4.4', 'https://i.ibb.co/YfHyBH2/1698760019-dead-trigger.jpg')">
+    <img src="https://i.ibb.co/YfHyBH2/1698760019-dead-trigger.jpg" alt="App">
+    <div class="app-details">
+      <h3>DEAD TRIGGER (MOD, Unlimited Money)</h3>
+      <p>Explore vast open worlds in this RPG game.</p>
+      <p>★ 4.4</p>
+    </div>
+  </div>
+  <div class="app" onclick="showDetails('Stick War: Legacy (MOD, Unlimited Gems)', '4.4', 'https://i.ibb.co/f9qht61/1684229427-stick-war-legacy.png')">
+    <img src="https://i.ibb.co/f9qht61/1684229427-stick-war-legacy.png" alt="App">
+    <div class="app-details">
+      <h3>Stick War: Legacy (MOD, Unlimited Gems)</h3>
+      <p>Explore vast open worlds in this RPG game.</p>
+      <p>★ 4.4</p>
+    </div>
+  </div>
+  <div class="app" onclick="showDetails('Hard Time III MOD APK (Unlocked)', '4.4', 'https://i.ibb.co/2F0xQ4D/icon-6.webp')">
+    <img src="https://i.ibb.co/2F0xQ4D/icon-6.webp" alt="App">
+    <div class="app-details">
+      <h3>Hard Time III MOD APK (Unlocked)</h3>
+      <p>Explore vast open worlds in this RPG game.</p>
+      <p>★ 4.4</p>
+    </div>
+  </div>
+    
+    
+  
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/4d1cc60020e2426c6672d2fb217030b1/invoke.js"></script>
+  <!-- النافذة المنبثقة للتفاصيل -->
+  <div class="popup" id="details-popup">
+    <div class="popup-content">
+      <span class="close" onclick="closeDetails()">&times;</span>
+      <img id="popup-image" src="" alt="App">
+      <h3 id="popup-title"></h3>
+      <p>Rating: ★ <span id="popup-rating"></span></p>
+      <p>Downloads: <span id="popup-downloads">900,000</span></p>
+      <div class="download-button" onclick="showDownload()">Start Download</div>
+    </div>
+  </div>
+
+  <!-- النافذة المنبثقة للتحميل -->
+  <div class="popup-download" id="download-popup">
+    <div class="popup-content">
+      <span class="close" onclick="closeDownload()">&times;</span>
+      <p id="loading-message">Preparing your download...</p></div>
+  </div>
+  
+  
+  
+  <!-- النافذة المنبثقة للإعلانات -->
+<div id="ad-popup" class="popup">
+  <div class="popup-content">
+    <h2 style="color: #4a90e2; margin-bottom: 20px;">Ads</h2>
+    <button class="popup-button" id="skip-button">Skip</button>
+  </div>
+</div>
+
+  <script>
+    let downloads = 900000;
+    let downloadLinks = {
+        'Fnf india cross apk': 'https://shorturl.at/tRuN4',
+        'Featured App 2': 'https://shorturl.at/fMawP',
+        'Ninja (MOD, Unlimited Money)': 'https://shorturl.at/2PMab',
+        'Racing Fever: Moto (MOD, Unlimited Money)': 'https://shorturl.at/GZZ1N',
+        'Ultra FUCK Aim 8 ball': 'https://shorturl.at/PrpHg',
+        'The Escapists: Prison Escape MOD (Unlimited Money)': 'https://shorturl.at/z9Yzh',
+        'Bus Simulator: EVO (MOD, Unlimited Money)': 'https://shorturl.at/9syp9',
+        'RFS MOD APK [Full Unlocked, Premium]': 'https://shorturl.at/GaB4v', 
+        'DEAD TRIGGER (MOD, Unlimited Money)': 'https://shorturl.at/Ne0NH',
+        'Stick War: Legacy (MOD, Unlimited Gems)': 'https://shorturl.at/TutNW',
+        'Hard Time III MOD APK (Unlocked)': 'https://shorturl.at/EccUV',
+    };
+
+    function showDetails(title, rating, image) {
+      document.getElementById('popup-title').textContent = title;
+      document.getElementById('popup-rating').textContent = rating;
+      document.getElementById('popup-image').src = image;
+
+      const downloadsElement = document.getElementById('popup-downloads');
+      downloadsElement.textContent = downloads.toLocaleString();
+      setInterval(() => {
+        downloads++;
+        downloadsElement.textContent = downloads.toLocaleString();
+      }, 1000);
+
+      document.getElementById('details-popup').style.display = 'flex';
+    }
+
+    function closeDetails() {
+      document.getElementById('details-popup').style.display = 'none';
+    }
+
+    function showDownload() {
+      document.getElementById('details-popup').style.display = 'none';
+      const downloadPopup = document.getElementById('download-popup');
+      const loadingMessage = document.getElementById('loading-message');
+      let messages = ['Preparing...', 'Processing...', 'Starting download...'];
+      let index = 0;
+
+      downloadPopup.style.display = 'flex';
+      loadingMessage.textContent = messages[index];
+
+      let interval = setInterval(() => {
+        index++;
+        if (index < messages.length) {
+          loadingMessage.textContent = messages[index];
+        } else {
+          clearInterval(interval);
+          downloadPopup.style.display = 'none';
+          // تحويل المستخدم إلى رابط التنزيل بعد انتهاء التحميل
+          const selectedApp = document.getElementById('popup-title').textContent;
+          window.location.href = downloadLinks[selectedApp];
+        }
+      }, 1500);
+    }
+
+    function closeDownload() {
+      document.getElementById('download-popup').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
